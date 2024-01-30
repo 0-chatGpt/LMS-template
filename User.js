@@ -3,6 +3,9 @@
 class User {
   #id;
   constructor(surname, firstname, email, password, id, phone_no) {
+    if(this.constructor === User){
+        throw new Error("User cannot be called or instantiated");
+    }
     this._email = email;
     this._password = password;
     this._surname = surname;
